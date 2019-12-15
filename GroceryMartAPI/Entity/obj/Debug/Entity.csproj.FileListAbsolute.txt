@@ -1,0 +1,11 @@
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Entity\bin\Debug\Entity.dll
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Entity\bin\Debug\Entity.pdb
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Entity\obj\Debug\Entity.dll
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Entity\obj\Debug\Entity.pdb
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\bin\Debug\Entity.dll
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\bin\Debug\Entity.pdb
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\obj\Debug\Entity.dll
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Entity\obj\Debug\Entity.pdb

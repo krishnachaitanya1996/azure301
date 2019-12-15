@@ -1,0 +1,80 @@
+﻿.main-container{
+    .product-details{
+        &.website-management{
+            table-layout: fixed;
+
+            td{
+                &.webname{
+                    .pl(20px);
+                    width: 230px;
+                }
+
+                &.retailer-url{
+                    a{
+                        width: 230px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                &.retailer-name{
+                    .pl(0px);
+
+                    div{
+                        &:extend(.main-container .product-details.website-management td.retailer-url a all);
+                    }
+                }
+                &.pass-key{
+                    width: 300px;
+                    .pr(20px);
+                }
+
+                &.edit{
+                    width: 40px;
+                }
+
+                .edit-icon {
+                    width: 30px;
+                    display: block;
+                    float: left;
+                }
+
+                &.actions {
+                    position: relative;
+
+                    button{
+                        &:extend(.main-container .right-align .button button);
+                        position: absolute;
+                        width: 90px;
+                        right: 22px;
+                        bottom: 20px;
+
+                        .material-icons{
+                            color: @black;
+                            float: left;
+                        }
+
+                        input{
+                            float: left;
+                            background: none;
+                            border: none;
+                            padding: 2px 0px;
+                            font-size: 12px;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

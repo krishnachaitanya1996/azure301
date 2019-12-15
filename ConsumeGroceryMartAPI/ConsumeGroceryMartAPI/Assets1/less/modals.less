@@ -1,0 +1,618 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+    .translate(0, -25%);
+    .transition-transform(~"0.5s ease-out");
+  }
+  &.in .modal-dialog { 
+    .translate(0, 0) 
+  }
+
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  width: 600px;
+  .m(8% auto);
+  text-align: left;
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-color: @modal-content-bg;
+  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 1px solid @modal-content-border-color;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal-background;
+  background-color: @modal-backdrop-bg;
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(@modal-backdrop-opacity); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: @modal-title-padding;
+  &:extend(.clearfix all);
+  background: @lightgrey3;
+}
+// Close icon
+.modal-header .close {
+  margin-top: -2px;
+}
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  line-height: @modal-title-line-height;
+  text-align: left;
+  .Helvetica-Neue-Bold();
+  text-transform: uppercase;
+  .font-size(20px);
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: 15px 15px 0;
+}
+
+.modal .has-error {
+    color: #FF0000;
+    font-size: 12px;
+    position: relative;
+    top: 6px;
+    left: 25%;
+
+    input.form-control{
+        .p(0 8px);
+        box-sizing: border-box;
+    }
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 0px 0 30px 26%;
+  &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+    background: none;
+    border: none;
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  input.btn.btn-default{
+        background: @blue;
+        color: @white;
+        .p(12px 30px);
+        border-radius: 7px;
+        border: none;
+
+        &:hover{
+            cursor: pointer;
+        }
+   }
+}
+
+#uploadExcel, #uploadFeed, #retailerExcel{
+    .modal-footer{
+        .btn+.btn{
+            border: none;
+            background: none;
+        }
+    }
+
+    .success-msg {
+        color: @red;
+        padding: 10px 0 0px;
+        margin-left: 25%;
+    }
+
+    .has-error{
+        color: @red;
+        font-size: 14px;
+        .m(10px 0);
+    }
+
+    #uploadmsg{
+        .pb(25px);
+
+        b{
+            .Helvetica-Neue-Bold();
+        }
+    }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.close {
+  float: right;
+  font-size: (@font-size-base * 1.5);
+  font-weight: @close-font-weight;
+  line-height: 1;
+  color: @close-color;
+  text-shadow: @close-text-shadow;
+  .opacity(.2);
+
+  &:hover,
+  &:focus {
+    color: @close-color;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(.5);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+  button& {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+#ProductNameListDiv{
+    select{
+        width: 60%;
+        float: left;
+        -webkit-appearance: menulist-button;
+        height: 33px;
+    }
+
+    button{
+        &:extend(.main-container .right-align .button button);
+        height: 33px;
+        .ml(10px);
+
+        i.material-icons{
+            .font-size(14px);
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+
+
+.buttons{
+    width: 75%;
+    .ml(25%);
+    .mb(20px);
+
+    .btn-default{
+        &:extend(.modal-footer input.btn.btn-default);
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .btn+.btn{
+        &:extend(.modal-footer .btn+.btn);
+        color: @black;
+        .p(0px 10px);
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+}
+
+#replicateDiv {
+
+    select {
+        width: 60%;
+        -webkit-appearance: menulist-button;
+        height: 33px;
+        margin-right: 10px;
+    }
+
+    #plusbtn{
+        &:extend(#ProductNameListDiv button all);
+        .ml(0);
+        height: auto;
+    }
+
+    .crossbtn{
+        &:extend(#replicateDiv #plusbtn all);
+    }
+}
+
+.confirmation-modal{
+    .modal-footer{
+        .confirm{
+            &:extend(.modal-footer input.btn.btn-default);
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.form-group{
+    #test{
+        
+    }
+}
+
+.error {
+    position: relative;
+    left: 25% !important;
+    box-sizing: border-box;
+    bottom: 11px;
+
+    span {
+        color: @red;
+        float: left;
+        width: 100%;
+        .font-size(11px);
+        .Helvetica-Neue-Roma();
+    }
+}
+
+#updateModel{
+    .form-group{
+        .mb(0px);
+        position: relative;
+
+        .col-md-10{
+            .pb(20px);
+
+            .error{
+                position: absolute;
+                bottom: 5px;
+            }
+
+            #wanted{
+                position: relative;
+                float: left;
+                width: 75%;
+
+                .error{
+                    bottom: 10px;
+                    left: 0px !important;
+                    position: relative;
+                }
+
+                .deleteretailer {
+                    position: relative;
+                    top: 3px;
+                }
+
+                input{
+                    width: 90%;
+                }
+            }
+
+            #test{
+                label, input{
+                    .mb(0);
+                }
+            }
+        }
+
+        .edit-retailer-name-list{
+            td{
+                #wanted{
+                    width: 100%;
+
+                    input{
+                        width: 95%;
+                        box-sizing: border-box;
+                       .mb(10px) !important;
+                        .m(10px auto);
+                        float: none;
+
+                        &:extend(.form-group input.form-control);
+
+                        &:focus{
+                            border: 1px solid @blue;
+                        }
+                        
+                    }
+
+                    .error{
+                        bottom: 5px;
+                        left: 10px !important;
+                        top: auto;
+                        text-align: left;
+                        float: left;
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                &.editBuyNow{
+                        div{
+                            &:extend(#updateModel .form-group .edit-retailer-name-list td #wanted input);
+
+                            text-align: left;
+                            display: flex;
+                            align-items: center;
+                            background: #e6e6e6;
+
+                            &:hover{
+                                cursor: not-allowed;
+                            }
+                        }
+                    }
+
+                label{
+                    width: 100%;
+                    float: left;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .add-buy-now-url {
+        .pl(25%);
+        .pb(20px);
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+
+        button{
+            &:extend(#ProductNameListDiv button);
+
+            .material-icons{
+                font-size: 14px;
+                position: relative;
+                top: 2px;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    #editforbuynowurls{
+        width: 100%;
+        float: left;
+
+        select{
+            width: 63%;
+            float: left;
+            -webkit-appearance: menulist-button;
+            height: 35px;
+            border: 1px solid @lightgrey;
+            border-radius: 5px;
+
+            &:focus{
+                outline: 0px;
+            }
+        }
+
+        button{
+            &:extend(#updateModel .add-buy-now-url button all);
+        }
+
+        .form-group{
+            .has-error{
+                top: auto;
+                bottom: 15px;
+            }
+        }
+    }
+
+    .edit-retailer-name-list{
+           &:extend(#replicateDiv .retailer-name-list all);
+    }
+}
+
+#dashboardUpdate{
+    #test{
+        label{
+            .mb(0);
+        }
+    }
+}
+
+#SkuDetails{
+
+    label{
+        width: 25%;
+        float: left;
+    }
+    #SkuNameList{
+        width: 75%;
+        float: left;
+        -webkit-appearance: menulist-button;
+        height: 33px;
+    }
+
+}
+
+
+.jqx-alert{
+    .jqx-alert-header{
+        &:extend(.modal-title);
+        .p(15px);
+        border: none;
+    }
+
+    div#alert_content {
+        border: none;
+        .p(15px);
+
+        input{
+            &:extend(.modal-footer input.btn.btn-default);
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+div#alert_overlay {
+    background: #000;
+    opacity: 0.5;
+}
+
+#replicateDiv{
+    .retailer-name-list{
+        width: 100%;
+        text-align: center;
+        .mb(30px);
+
+        tr{
+            td, th{
+                border: 1px solid @darkgrey1;
+                height: 30px;
+                vertical-align: middle;
+
+                .material-icons{
+                    font-size: 16px;
+                }
+
+                .buy_nw {
+                    width: 290px;
+                    margin: 0px auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            th{
+                background: @lightgrey1;
+                text-transform: uppercase;
+                .Helvetica-Neue-Bold();
+            }
+        }
+    }
+}
+
+#UpdateDashboard{
+    .modal-body{
+        .form-group{
+            .mb(0px);
+        }
+        .success-msg{
+            float: left;
+            width: 100%;
+
+            span{
+                &:extend(.modal .has-error);
+                bottom: 10px;
+                top: auto;
+            }
+        }
+    }
+}
+
+#importFromGlobal{
+
+    #countrylist{
+        select{
+            &:extend(header .search .select-box select);
+        }
+    }
+
+    #globalMaster{
+        .mt(20px);
+        .mb(15px);
+        &:extend(#replicateDiv .retailer-name-list all);
+    }
+
+    .modal-footer{
+        .pl(3%);
+    }
+
+    .success-msg {
+        color: @red;
+        padding: 0px 0 15px;
+    }
+}
+
+#RetailerForm{
+    #existErrorMsg{
+        color: @red;
+        .pl(27%);
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        .mb(15px);
+    }
+}

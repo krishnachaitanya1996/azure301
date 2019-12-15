@@ -1,0 +1,84 @@
+﻿@model ConsumeGroceryMartAPI.Models.User
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>            
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isRegisteredbyGmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isRegisteredbyGmail)
+        </dd>
+    </dl>
+</div>
+
+<table id="OrderList">
+    
+
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+    @*<a id="orderdata" data-value="@Model.UserId">OrderList</a>*@
+   @* @Html.Hidden("orderdata1",Model.UserId)*@
+   @Html.ActionLink("OrderLists", "OrderList","Home",
+    new
+    {                                                     // routeValues
+        id = Model.UserId
+    },
+    null)
+</p>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+    $(document).ready(function () {
+        $("#orderdata").click(function () {
+            var id = $("#orderdata").data("value");
+            $.ajax({
+                url: '/Home/OrderList/',
+                type: 'POST',
+                data: { 'id': id },
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    var row = $('<tr>');
+                    $.each(data, function (i) {
+                        row.append($('<td>').html(data[i]));
+                    });
+                    $('#results').append(row);
+                },
+                error: function () {
+                    alert("Error occured!!")
+                }
+            });
+        })
+    })
+</script>

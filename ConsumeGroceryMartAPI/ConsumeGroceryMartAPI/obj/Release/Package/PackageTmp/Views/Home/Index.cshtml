@@ -1,0 +1,36 @@
+﻿@Model ConsumeGroceryMartAPI.Models.User
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@foreach(var item in Model)
+{
+    <p>item.Name</p>
+    <p>item.Email</p>
+}*@
+
+<table border="1">
+    <thead>
+        <tr>
+            @foreach (System.Data.DataColumn col in Model.Columns) { 
+            <th>@col.Caption</th>
+            } 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(System.Data.DataRow row in Model.Rows) { 
+        <tr>
+            @foreach (var cell in row.ItemArray) {
+            <td>@cell.ToString()</td>
+            }
+        </tr>
+        } 
+    </tbody>
+</table>
+
+
+
+
+
+
+

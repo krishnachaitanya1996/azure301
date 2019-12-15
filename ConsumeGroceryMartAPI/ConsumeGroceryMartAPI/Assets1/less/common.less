@@ -1,0 +1,161 @@
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body{
+    background: @grey;
+    .no-margin;
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 100%;
+}
+
+.row{
+    .pl(15px);
+    .pr(15px);
+    .clearfix;
+}
+
+a{
+    text-decoration: none;
+    color: @darkgrey;
+    .Helvetica-Neue-Roma();
+    .font-size(14px);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
+}
+
+.container-row{
+    margin: 0px auto;
+   
+    @media only screen and (min-width: @screen-lg-min) {
+        width: @container-lg;
+    }
+
+}
+
+
+
+/*.hide {
+    display: none;
+}*/
+
+.container.body-content{
+    .pb(60px);
+}
+
+.form-group {
+    display: block;
+    .mb(20px);
+
+    .col-md-10{
+        display: flex;
+    }
+
+    label {
+        width: 25%;
+        float: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    input.form-control {
+        width: 75%;
+        float: right;
+        border: 1px solid @lightgrey;
+        .p(0 6px);
+        border-radius: 7px;
+        height: 35px;
+        box-sizing: border-box;
+
+        &:focus{
+            border-color: @blue !important;
+        }
+    }
+
+    #test{
+        width: 100%;
+        
+        label {
+            height: 35px;
+            .mb(20px);
+        }
+
+        input.form-control {
+            margin-bottom: 20px;
+            height: 35px;
+            width: 65%;
+        }
+
+        #wanted{
+            input{
+                width: 67%;
+                float: left;
+                .mr(2%);
+            }
+        }
+
+    }
+}
+
+.exceldownload{
+    thead, tbody{
+        display: none;
+    }
+
+    .btn-toolbar{
+        width: 70px;
+        button{
+            &:extend(.main-container .right-align .button button);
+        }
+    }
+    
+}
+
+#progressImage{
+    background-image: url('../Images/ajax-loader.gif');
+    width: 32px;
+    height: 32px;
+    z-index: 9999;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);  
+    display: none;
+}
+
+.gvFooter {
+    text-align: right;
+}
+
+.gvFooter td {
+    padding-right: 150px;
+}
+
+input.btn-default[disabled]{
+    cursor: not-allowed;
+
+    &:hover{
+        cursor: not-allowed;
+    }
+}

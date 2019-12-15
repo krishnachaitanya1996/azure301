@@ -1,0 +1,156 @@
+2019-01-30 18:44:55,380 [10] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:28:05,490 [12] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:26,430 [31] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:27,675 [34] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:30,053 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:31,121 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:32,060 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:33,208 [31] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:34,469 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:35,300 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:35,827 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:36,359 [34] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:37,182 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:37,741 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:39,486 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:39,893 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:40,421 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:35:40,804 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:36:02,980 [31] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:36:03,543 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:36:03,919 [25] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:36:04,334 [32] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:36:04,738 [31] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:55:04,561 [84] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:55:05,021 [83] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:55:06,610 [81] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-30 19:55:08,364 [81] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-31 03:03:30,300 [15] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-31 03:05:39,552 [18] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-31 03:06:05,049 [18] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 43 
+
+2019-01-31 11:49:42,947 [14] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:05:51,238 [16] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:08,768 [14] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:12,181 [14] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:13,550 [18] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:16,371 [14] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:22,222 [16] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:24,622 [14] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+
+2019-01-31 12:07:27,319 [26] ERROR GroceryMartAPI.Controllers.UserController - UserId: 
+ Void MoveNext():System.Exception: try
+   at GroceryMartAPI.Controllers.UserController.<ValidateUser>d__3.MoveNext() in D:\AZURE 301\DotNet\API\GroceryMartAPI\GroceryMartAPI\Controllers\UserController.cs:line 46 
+

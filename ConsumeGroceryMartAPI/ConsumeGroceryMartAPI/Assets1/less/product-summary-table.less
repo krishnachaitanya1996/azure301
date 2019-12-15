@@ -1,0 +1,316 @@
+﻿
+.main-container {
+
+    .zui-wrapper {
+        position: relative;
+        width: 100%;
+        float: left;
+        background: #fff;
+        box-shadow: 0 1px 6px #ccc;
+    }
+
+    .zui-scroller {
+        width: 575px;
+        margin-left: 565px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+
+    .product-details{
+
+        &.table-scroll {
+            position: static;
+            float: left;
+            overflow-x: auto;
+            box-shadow: unset;
+
+            tr{
+                &:last-child{
+                    td{
+                        border: none;
+
+                        div{
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            th{
+                height: 40px;
+                box-sizing: border-box;
+
+                div{
+                    background: @light-green;
+                    .Helvetica-Neue-Bold();
+
+                    &.actions, &.status, &.retailer-name, &.product-name{
+                        .p(13px 0);
+                        text-align: center;
+                    }
+
+                    &.product-name, &.retailer-name{
+                        text-align: left;
+                    }
+                }
+
+                &:first-child{
+                    .p(0);
+                    position: absolute;
+                    left: 0px;
+                    width: 80px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+
+                &:nth-child(2){
+                    .p(0);
+                    position: absolute;
+                    left: 80px;
+                    width: 100px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+
+                &:nth-child(3){
+                    .p(0);
+                    position: absolute;
+                    left: 180px;
+                    width: 150px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+
+                &:nth-child(4){
+                    .p(0);
+                    position: absolute;
+                    left: 330px;
+                    width: 239px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+                &:nth-child(5){
+                    width: 150px;
+                }
+                
+            }
+
+            td{
+
+                @-moz-document url-prefix() {
+                    height: 76px;
+                }
+
+                .actions, .status, .gtin{
+                    text-align: center;
+                    box-sizing: border-box;
+                    border-bottom: 0.5px solid #e6e6e6;
+                    display: inherit;
+                    height: 76.5px;
+                    align-items: center;
+                    align-content: center;
+                }
+
+                &.zui-sticky-col, &.status-retailer, &.retailer-name{
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    border: none;
+                }
+
+                .gtin{
+                    text-align: left;
+                    .pr(15px);
+                    width: 100%;
+                }
+
+                .name{
+                    display: inherit;
+                    height: 76px;
+                    align-items: center;
+                    align-content: center;
+                    overflow: hidden;
+                    width: 100%;
+                    .pr(15px);
+                    border-bottom: 0.5px solid @lightgrey1;
+
+                    p{
+                        .m(0px);
+                        max-height: 40px;
+                        height: auto;
+                        overflow: hidden;
+
+                        a{
+                            display: inherit;
+                            align-items: left;
+                            align-content: space-around;
+                            overflow: hidden;
+                            .mr(25px);
+                            .pr(0px);
+                            display: block;
+                            text-overflow: ellipsis;
+                            width: 200px;
+                            white-space: nowrap;
+
+                        }
+                    }
+
+                    
+                }
+
+                &.status-retailer{
+                    position: absolute;
+                    left: 80px;
+                    width: 100px;
+                    height: auto;
+
+                    .status{
+
+                        .dot {
+                            height: 12px;
+                            width: 12px;
+                            background-color: @lightgrey1;
+                            border-radius: 50%;
+                            display: inline-block;
+                            .m(0px auto);
+
+                            &.active{
+                                background-color: @green;
+                            }
+                        }
+                    }
+                }
+
+                &.retailer-name{
+                    position: absolute;
+                    left: 180px;
+                    width: 150px;
+                    height: auto;
+                    .pr(0);
+                    justify-content: left;
+                }
+
+                &.product-name{
+                    position: absolute;
+                    left: 330px;
+                    width: 235px;
+                    height: auto;
+                    display: flex;
+                    justify-content: left;
+                    border: none;
+                    .p(0px);
+                }
+
+                &.skuname{
+                    width: 150px;
+                }
+                
+            }
+
+            th, td{
+
+                .status{
+                    width: 100px;
+                    text-align: center;
+                }
+
+                .retailer-name{
+                    width: 150px;
+                    word-wrap: break-word;
+                }
+
+
+                .sku{
+                    width: 150px;
+                    .pl(5px);
+                }
+
+                .actions{
+                    
+
+                    .material-icons{
+                        .font-size(18px);
+                        color: @lightgrey2;
+                        .mr(5px);
+                    }
+
+                    .display-mode{
+                        width: 15px;
+                        .m(0);
+                        .p(0);
+                        background: none;
+                        border: none;
+                    }
+
+                    .edit-mode {
+                        padding: 0px;
+                        background: none;
+                        border: none;
+                    }
+
+                    .display-mode, .edit-mode{
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+
+                &.zui-sticky-col{
+                    text-align: center;
+                    position: absolute;
+                    left: 0px;
+                    border-bottom: unset;
+                    width: 80px;
+                    height: auto;
+
+                    .actions{
+                        .p(0 17px);
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                    }
+                }
+
+                table.retailer-table{
+                    width: 100%;
+                    display: table-caption;
+
+                    td{
+
+                        &.retailer-logo{
+                            .p(3px 20px 0px 0);
+                            border: none;
+
+                            a{
+                                width: 85px;
+                                height: auto;
+                                display: block;
+                                text-align: center;
+
+                                
+                            }
+
+                            
+                        }
+                    }
+                }
+
+
+            }
+
+            tfoot{
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                border-top: 1px solid #e6e6e6;
+            }
+
+        }
+
+    }
+}

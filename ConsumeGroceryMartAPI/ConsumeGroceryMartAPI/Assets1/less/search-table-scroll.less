@@ -1,0 +1,269 @@
+﻿
+.main-container {
+
+    .zui-wrapper {
+        position: relative;
+        width: 100%;
+        float: left;
+        background: #fff;
+        box-shadow: 0 1px 6px #ccc;
+    }
+
+    .zui-scroller.search-page {
+        width: 501px;
+        margin-left: 639px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+
+    .product-details{
+
+        &.search-scroll {
+            position: static;
+            float: left;
+            overflow-x: auto;
+            box-shadow: unset;
+
+            tr{
+                &:last-child{
+                    td{
+                        border: none;
+
+                        div{
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            th{
+                height: 40px;
+                box-sizing: border-box;
+
+                div{
+                    background: @light-green;
+                    .Helvetica-Neue-Bold();
+
+                    &.status, &.retailer-name, &.product-name, &.sku-name{
+                        .p(13px 0);
+                        text-align: center;
+                    }
+
+                    &.product-name, &.retailer-name, &.sku-name{
+                        text-align: left;
+                    }
+                }
+
+                &:first-child{
+                    .p(0);
+                    position: absolute;
+                    left: 0px;
+                    width: 100px;
+                    float: left;
+                    height: 41px;
+                    top: 0;
+                }
+
+                &:nth-child(2){
+                    .p(0);
+                    position: absolute;
+                    left: 100px;
+                    width: 150px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+
+                &:nth-child(3){
+                    .p(0);
+                    position: absolute;
+                    left: 250px;
+                    width: 239px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+
+                &:nth-child(4){
+                    .p(0);
+                    position: absolute;
+                    left: 489px;
+                    width: 150px;
+                    float: left;
+                    height: 41px;
+                    top: 0px;
+                }
+                
+            }
+
+            td{
+                height: 75.5px;
+                @-moz-document url-prefix() {
+                    height: 76px;
+                }
+
+                .actions, .status, .gtin{
+                    text-align: center;
+                    box-sizing: border-box;
+                    border-bottom: 0.5px solid #e6e6e6;
+                    display: inherit;
+                    height: 76.5px;
+                    align-items: center;
+                    align-content: center;
+                }
+
+                &.zui-sticky-col, &.status-retailer, &.retailer-name{
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    border: none;
+                }
+
+                .gtin{
+                    text-align: left;
+                    .pr(15px);
+                    width: 100%;
+                }
+
+                .sku{
+
+                    span{
+                        display: block;
+                        width: 130px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    
+                }
+
+                .name, .sku{
+                    display: inherit;
+                    height: 76px;
+                    align-items: center;
+                    align-content: center;
+                    overflow: hidden;
+                    width: 100%;
+                    .pr(15px);
+                    border-bottom: 0.5px solid @lightgrey1;
+
+                    p{
+                        .m(0px);
+                        max-height: 40px;
+                        height: auto;
+                        overflow: hidden;
+
+                        a{
+                            display: inherit;
+                            align-items: left;
+                            align-content: space-around;
+                            overflow: hidden;
+                            .mr(25px);
+                            .pr(0px);
+                            display: block;
+                            text-overflow: ellipsis;
+                            width: 200px;
+                            white-space: nowrap;
+
+                        }
+                    }
+
+                    
+                }
+
+                &.status-retailer{
+                    position: absolute;
+                    left: 0px;
+                    width: 100px;
+                    height: auto;
+
+                    .status{
+
+                        .dot {
+                            height: 12px;
+                            width: 12px;
+                            background-color: @lightgrey1;
+                            border-radius: 50%;
+                            display: inline-block;
+                            .m(0px auto);
+
+                            &.active{
+                                background-color: @green;
+                            }
+                        }
+                    }
+                }
+
+                &.retailer-name{
+                    position: absolute;
+                    left: 100px;
+                    width: 150px;
+                    height: auto;
+                    .pr(0);
+                    justify-content: left;
+                }
+
+                &.product-name{
+                    position: absolute;
+                    left: 250px;
+                    width: 239px;
+                    height: auto;
+                    display: flex;
+                    justify-content: left;
+                    border: none;
+                    .p(0px);
+                }
+
+                &.sku-name{
+                    position: absolute;
+                    left: 489px;
+                    width: 150px;
+                    height: auto;
+                    display: flex;
+                    justify-content: left;
+                    border: none;
+                    .p(0px);
+                }
+                
+            }
+
+            th, td{
+
+                .status{
+                    width: 100px;
+                    text-align: center;
+                }
+
+                .retailer-name{
+                    width: 150px;
+                    word-wrap: break-word;
+                }
+
+
+                table.retailer-table{
+                    width: 100%;
+                    display: table-caption;
+
+                    td{
+
+                        &.retailer-logo{
+                            .p(3px 20px 0px 0);
+                            border: none;
+
+                            a{
+                                width: 85px;
+                                height: auto;
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
+}

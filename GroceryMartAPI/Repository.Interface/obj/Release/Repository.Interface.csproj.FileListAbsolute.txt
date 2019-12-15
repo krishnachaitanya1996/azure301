@@ -1,0 +1,11 @@
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Repository.Interface\bin\Release\Repository.Interface.dll
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Repository.Interface\bin\Release\Repository.Interface.pdb
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.csprojResolveAssemblyReference.cache
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.dll
+D:\AZURE 301\DotNet\API\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.pdb
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\bin\Release\Repository.Interface.dll
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\bin\Release\Repository.Interface.pdb
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.dll
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.pdb
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.csprojAssemblyReference.cache
+D:\AZURE 301\DotNet\API\Backup\TRY\GroceryMartAPI\Repository.Interface\obj\Release\Repository.Interface.csproj.CoreCompileInputs.cache

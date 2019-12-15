@@ -1,0 +1,54 @@
+﻿
+nav.page-count{
+    .p(10px 0);
+    float: right;
+    width: 386px;
+    text-align: right;
+
+    .pagination{
+        float: right;
+
+        .page-item{
+            float: left;
+            .mr(5px);
+
+            &.active{
+                a{
+                    background: @darkgrey1;
+                    color: @white;
+                    border: 1px solid @darkgrey1;
+                }
+            }
+
+            a{
+                width: 20px;
+                height: 20px;
+                border: 1px solid @lightgrey;
+                border-radius: 50%;
+                display: flex;
+                float: left;
+                justify-content: center;
+                align-content: center;
+                 align-items: center;
+                font-size: 12px;
+
+                &:focus{
+                    outline: 0px;
+                }
+
+
+                .material-icons{
+                    font-size: 12px;
+                }
+            }
+        }
+        
+    }
+}
+
+.paginations {
+    width: 100%;
+    float: left;
+    background: #fff;
+    box-shadow: 0 1px 6px #ccc;
+}

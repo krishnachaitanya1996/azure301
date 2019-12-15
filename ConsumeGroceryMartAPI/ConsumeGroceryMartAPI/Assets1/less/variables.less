@@ -1,0 +1,105 @@
+
+@white : #FFFFFF;
+@black: #000000;
+@grey: #f4f4f4;
+@darkgrey: #101010;
+@darkgrey1: #777777;
+@blue: #009fe3;
+@red: #ff0000;
+@lightgrey: #ccc;
+@lightgrey1: #e6e6e6;
+@lightgrey2: #7f7f7f;
+@lightgrey3: #f1f1f1;
+@light-green: #f6fbfe;
+@green: #11d360;
+@orange: #ff6732;
+@red: #FF0000;
+
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+
+
+//== Typography
+
+@font-size-base:         14px;
+@font-size-small:        ceil((@font-size-base * 0.85)); // ~12px
+@font-size-very-small:   ceil((@font-size-base * 0.70)); // ~10px
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+@modal-inner-padding:         15px;
+
+//** Padding applied to the modal title
+@modal-title-padding:         15px;
+//** Modal title line-height
+@modal-title-line-height:     @line-height-base;
+
+//** Background color of modal content area
+@modal-content-bg:                             #fff;
+//** Modal content border color
+@modal-content-border-color:                   rgba(0,0,0,.2);
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color:          #999;
+
+//** Modal backdrop background color
+@modal-backdrop-bg:           #000;
+//** Modal backdrop opacity
+@modal-backdrop-opacity:      .5;
+//** Modal header border color
+@modal-header-border-color:   #e5e5e5;
+//** Modal footer border color
+@modal-footer-border-color:   @modal-header-border-color;
+
+//== Close
+//
+//##
+
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+@grid-gutter-width:         30px;
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+
+
+//== Media queries breakpoints
+
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);

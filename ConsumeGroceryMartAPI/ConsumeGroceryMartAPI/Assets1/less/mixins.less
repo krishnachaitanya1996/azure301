@@ -1,0 +1,108 @@
+
+.font-size(@size) {
+	font-size: @size;
+}
+
+.font-weight(@weight) {
+	font-weight: @weight;
+}
+
+.no-margin{
+    .m(0px);
+}
+
+.vertical-space-top(@margin) {
+	margin-top: @margin;
+}
+
+.vertical-space(@margin) {
+	margin-bottom: @margin;
+}
+
+.border-none() {
+	border: none;
+}
+
+// Clearfix
+
+.clearfix{
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}
+
+// Opacity
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y); // IE9 only
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}
+
+/* Margin Mixin */
+
+.m(@value) {
+	margin: @value;
+}
+
+.mt(@value) {
+	margin-top: @value;
+}
+
+.mr(@value) {
+	margin-right: @value;
+}
+
+.mb(@value) {
+	margin-bottom: @value;
+}
+
+.ml(@value) {
+	margin-left: @value;
+}
+
+/* Padding Mixin */
+
+.p(@value) {
+	padding: @value;
+}
+
+.pt(@value) {
+	padding-top: @value;
+}
+
+.pr(@value) {
+	padding-right: @value;
+}
+
+.pb(@value) {
+	padding-bottom: @value;
+}
+
+.pl(@value) {
+	padding-left: @value;
+}

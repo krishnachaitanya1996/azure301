@@ -1,0 +1,145 @@
+﻿@model IEnumerable<ConsumeGroceryMartAPI.Models.Item>
+
+@*@{
+        ViewBag.Title = "GetAllItems";
+    }*@
+
+@*<h2>GetAllItems</h2>*@
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+@using (Html.BeginForm("FilterProducts", "Home", FormMethod.Post, new { @name = "Form1" }))
+{
+@*@Html.DropDownList("Quantity", (IEnumerable<SelectListItem>)ViewBag.QuantityTypes, "--Select ItemQuantityType--", new { @class = "form-control quantityType" })*@
+
+@Html.DropDownList("ItemTypeId", (IEnumerable<SelectListItem>)ViewBag.ItemTypes, "--Select ItemType--", new { @class = "form-control productType" })
+}
+
+
+@foreach (var item in Model)
+{
+    string img = string.Empty;
+    if (item.ImagePath != string.Empty)
+    {
+        img = item.ImagePath.Replace("\\", "/").Replace("D:/AZURE 301/DotNet/API/ConsumeGroceryMartAPI/ConsumeGroceryMartAPI", "~");
+    }
+    <div class="card" style="width: 20rem; text-align:center;display:inline-block;">
+        <img class="card-img-top" src=@Url.Content(img) alt="Card image cap" height="200" width="200" style="border-radius:.60rem;">
+        <div class="card-block">
+            <h4 class="card-title">@Html.DisplayFor(modelItem => item.Itemname)</h4>
+            <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+            <p class="card-text">Rs. @Html.DisplayFor(modelItem => item.Price) /-</p>
+            <p class="card-text"> Per @Html.DisplayFor(modelItem => item.QuantityType)</p>
+            <div style="text-align:center;display:inline-block;">
+                <a href="#" id="minus-@item.Itemid" class="glyphicon glyphicon-minus-sign" onclick="Decrement(@item.Itemid);"></a>
+                <input type="text" id="idNum-@item.Itemid" value="0" style="width:40%"/>
+                <a href="#" id="plus-@item.Itemid" class="glyphicon glyphicon-plus-sign" onclick="Increment(@item.Itemid);"></a>
+            </div>
+        </div>
+    </div>
+}
+@*<div>
+    <button class="btn btn-success" id="orderNow">Order Now</button>
+</div>*@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+   Order Now
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Order</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form">
+                <div class="modal-body">
+                    <h3>All the items with Quantity more than 0 will get ordered.... Please Check and confirm..! :)</h3>
+                    <input type="text" id="addressToPlaceorder" placeholder="give Address Here">
+                </div>
+            </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="exit" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="orderNow">Place Order</button>
+                </div>
+</div>
+    </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script>
+    $(document).ready(function () {
+       
+        $("#orderNow").click(function () {
+            //$('[id^=idnum]')
+            var AllItemsToBeOrdered = [];
+            
+            $('input[type="text"]').each(function () {
+                if (parseInt($(this).val(), 10) > 0)
+                {
+                    var id = this.id;
+                    product = {};
+                    var itemId = id.split("-")[1];
+                    product["Itemid"] = itemId;
+                    product["Quantity"] = $(this).val();
+                    product["address"] = $("#addressToPlaceorder").val();
+
+                    AllItemsToBeOrdered.push(product);
+                    
+                }               
+            });
+            $.ajax({
+                url: '/Home/PlaceOrder/',
+                type: 'POST',
+                data: { 'ProductsToBeOrdered': AllItemsToBeOrdered },
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("form")[0].reset();
+                    $('#exit').click();
+                    location.reload();
+                },
+                error: function () {
+                    alert("Error occured!!")
+                }
+            });
+            console.log(AllItemsToBeOrdered);
+        }); 
+        $(".productType").change(function () {
+            document.forms["Form1"].submit();
+
+
+            //$.ajax({
+            //    url: '/Home/FilterProducts/',
+            //    type: 'POST',
+            //    data: { 'ProductTypeid': $(".productType").val() },
+            //    dataType: "json"
+            //    //,
+            //    //success: function (data) {
+            //    //    console.log(data);
+                   
+            //    //},
+            //    //error: function () {
+            //    //    alert("Error occured!!")
+            //    //}
+            //});
+        });
+    });
+    function Increment(val) {        
+        $("#idNum-" + val).val((parseInt($("#idNum-" + val).val()) + parseInt(1)).toString());
+    }
+
+    function Decrement(val) {
+        //var n = parseInt($("#idNum-" + val).val());
+        if (parseInt($("#idNum-" + val).val()) > parseInt(0))
+        $("#idNum-" + val).val((parseInt($("#idNum-" + val).val()) - parseInt(1)).toString());
+    }
+</script>
+
+
